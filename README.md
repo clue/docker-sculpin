@@ -55,8 +55,8 @@ While this might seem complicated at first, it's actually a rather common setup 
 * `-it` will run an interactive session that can be terminated with CTRL+C
 * `--rm` will run a temporary session that will make sure to remove the container on exit
 * `-p 8000:8000` will expose sculpin's built-in webserver on your system
-* `-v `pwd`:/data` will mount your current directory into the working directory inside the container
-* `-u `id -u` will make sure that all files will be created with the same access rights as on your system
+* `-v $(pwd):/data` will mount your current directory into the working directory inside the container
+* `-u $(id -u)` will make sure that all files will be created with the same access rights as on your system
 * `clue/sculpin` the name of this docker image
 
 ## Usage
